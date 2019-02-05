@@ -1,0 +1,26 @@
+.banner{
+    text-transform: uppercase;
+    color:#021160;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin:20px 0 30px;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+}
+.submit {
+    border:1px solid #88151B;
+    padding: 15px 100px;
+    border-radius: 8px;
+    background: #B2060C;
+    background:linear-gradient(to bottom,#EF3D4A,#B2060C);
+    background:-moz-linear-gradient(to bottom,#EF3D4A,#B2060C);
+    background:-webkit-linear-gradient(to bottom,#EF3D4A,#B2060C);
+    background:-ms-linear-gradient(to bottom,#EF3D4A,#B2060C);
+    background:-o-linear-gradient(to bottom,#EF3D4A,#B2060C);
+    color:#fff;
+    cursor: pointer;
+    font-weight: 600;
+}
