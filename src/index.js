@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import history from './history';
 import App from './components/App';
 import rootReducer from './reducers';
+import Results from './containers/Results';
 
 const store = createStore(rootReducer, composeWithDevTools());
 
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Router history={history}>
             <Switch>
                 <Route exact path='/' component={App} />
+                <Route exact path='/results' component={Results} />
             </Switch>
         </Router>
     </Provider>,
