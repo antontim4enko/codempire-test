@@ -22,6 +22,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
+}
+.label{
+    font-weight: 500;
 }
 
 input, select {
@@ -30,6 +34,15 @@ input, select {
     padding:10px;
     text-align: center;
 }
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.number {
+    margin-right: 20px;
+}
+
 
 /*==========  Desktop First Method  ==========*/
 

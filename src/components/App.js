@@ -7,11 +7,12 @@ import RadioBtnsQuest from '../containers/RadioBtnsQuest';
 import TextQuest from '../containers/TextQuest';
 import { Link } from 'react-router-dom';
 import history from '../history';
+import QuizCmponent from '../containers/QuizCmponent';
 
 
 const mapStateToProps = state => ({
     answers: state.answers,
-
+    questions: state.questions
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -26,8 +27,9 @@ class App extends Component {
 
     validator = () => {
         for (var key in this.props.answers) {
-            if ((this.props.answers[key] === '') || (this.props.answers[key] === [])) {
+            if ((this.props.answers[key] === '') || (this.props.answers[key].length === 0)) {
                 this.setState({ isValid: false });
+                break;
             }
 
         };
@@ -50,10 +52,13 @@ class App extends Component {
                 <div className="center">
                     <p className="banner border">Тестирование по программированию </p>
                 </div>
-                <SelectQuest />
-                <CheckBoxQuest />
-                <RadioBtnsQuest />
-                <TextQuest />
+                {
+                    this.props.questions.map( (question, id) => (
+                        <QuizCmponent key={id} question={question} answer={this.props.answers[question.id]} />
+                    )
+                    )
+                }
+                
                 <div className="center">
                     <button onClick={this.verify} className="submit">Ответить</button>
                 </div>

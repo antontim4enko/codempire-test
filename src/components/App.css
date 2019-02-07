@@ -25,3 +25,15 @@
     font-weight: 600;
     margin-bottom: 25px;
 }
+.warn-message {
+    display: block;
+    border-radius: 16px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    background: #E4E8F1;
+}
+.warn-buttons{
+    margin-right: 14px;
+    padding: 5px 13px;
+    
+}
