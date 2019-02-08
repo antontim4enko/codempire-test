@@ -17,16 +17,14 @@ class QuizComponent extends Component {
     answerChange = (e, answer, option, question) => {
 
         if (answer.includes(option)) {
-            answer.splice(answer.indexOf(option), 1);
-            this.props.setAnswer(question.id, answer);
+            this.props.setAnswer(question.id, answer.filter( answer => answer !== option));
         } else {
             this.props.setAnswer(question.id, [...answer, e.target.name])
         }
 
     }
-
     renderQuiz = (question, answer) => {
-        switch (this.props.question.type) {
+        switch (question.type) {
             case 'select':
                 return (
                     <select className="select" onChange={e => this.props.setAnswer(question.id, e.target.value)} value={answer} >

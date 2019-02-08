@@ -7,7 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
 import history from './history';
-import App from './components/App';
+import App from './containers/App';
 import rootReducer from './reducers';
 import Results from './containers/Results';
 
