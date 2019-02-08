@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
-import SelectQuest from '../containers/SelectQuest';
-import CheckBoxQuest from '../containers/CheckBoxQuest';
-import RadioBtnsQuest from '../containers/RadioBtnsQuest';
-import TextQuest from '../containers/TextQuest';
 import { Link } from 'react-router-dom';
 import history from '../history';
 import QuizCmponent from '../containers/QuizCmponent';

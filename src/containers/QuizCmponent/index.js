@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setAnswer } from '../../actions';
 
 const mapStateToProps = state => ({
-   
+
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -15,10 +15,14 @@ const mapDispatchToProps = dispatch => ({
 class QuizComponent extends Component {
 
     answerChange = (e, answer, option, question) => {
-        
-        (answer.includes(option))
-            ? this.props.setAnswer(question.id, answer.splice(answer.indexOf(option), 1)) 
-            : this.props.setAnswer(question.id, [...answer, e.target.name])
+
+        if (answer.includes(option)) {
+            answer.splice(answer.indexOf(option), 1);
+            this.props.setAnswer(question.id, answer);
+        } else {
+            this.props.setAnswer(question.id, [...answer, e.target.name])
+        }
+
     }
 
     renderQuiz = (question, answer) => {
